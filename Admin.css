@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Admin Stylesheet - Toko Bangunan Mitra (TB Mitra)
+   Tema: Biru, Putih, dan Abu-Abu (Kompatibel dengan Bootstrap 5.3)
+   ========================================================================== */
+
+:root {
+    --tb-primary: #1d4ed8;
+    --tb-primary-dark: #1e3a8a;
+    --tb-primary-soft: #eff6ff;
+    --tb-surface: #ffffff;
+    --tb-bg-muted: #f8fafc;
+    --tb-border: #e2e8f0;
+    --tb-text-main: #0f172a;
+    --tb-text-muted: #64748b;
+}
+
+body.admin-body {
+    background-color: var(--tb-bg-muted);
+    color: var(--tb-text-main);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Topbar & Navigasi Admin */
+.admin-header {
+    background-color: var(--tb-surface);
+    border-bottom: 1px solid var(--tb-border);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.admin-nav .nav-link {
+    color: var(--tb-text-muted);
+    font-weight: 600;
+    transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.admin-nav .nav-link:hover {
+    background-color: var(--tb-primary-soft);
+    color: var(--tb-primary);
+}
+
+.admin-nav .nav-link.active {
+    background-color: var(--tb-primary-soft);
+    color: var(--tb-primary-dark);
+}
+
+/* Kartu KPI & Panel Admin */
+.admin-card {
+    background-color: var(--tb-surface);
+    border: 1px solid var(--tb-border);
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.admin-kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30, 58, 138, 0.08);
+    border-color: #cbd5e1;
+}
+
+.admin-kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    background-color: var(--tb-primary-soft);
+    color: var(--tb-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Tabel Data Admin */
+.admin-table thead th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom-width: 1px;
+    border-color: var(--tb-border);
+    white-space: nowrap;
+}
+
+.admin-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.admin-table tbody tr.is-selected {
+    background-color: #eff6ff !important;
+}
+
+/* Thumbnail Produk di Tabel */
+.admin-thumb {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid var(--tb-border);
+    background-color: #f1f5f9;
+}
+
+/* Status Stok Menipis */
+.stock-badge-low {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    font-weight: 700;
+}
+
+.stock-badge-ok {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+}
+
+/* Wadah Grafik Chart.js */
+.admin-chart-box {
+    position: relative;
+    height: 260px;
+    width: 100%;
+}
+
+/* Panel Sticky di Desktop */
+@media (min-width: 992px) {
+    .admin-sticky-panel {
+        position: sticky;
+        top: 88px;
+        z-index: 10;
+    }
+}
+
+/* Mode Cetak untuk Halaman Laporan */
+@media print {
+    .admin-header,
+    .admin-footer,
+    .no-print,
+    .btn {
+        display: none !important;
+    }
+
+    body.admin-body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .admin-card {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+    }
+
+    .table-responsive {
+        overflow: visible !important;
+    }
+}
