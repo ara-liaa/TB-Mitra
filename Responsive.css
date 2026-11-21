@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Responsive Stylesheet - Toko Bangunan Mitra (TB Mitra)
+   Menyesuaikan tata letak, tipografi, tabel, dan panel aksi di berbagai layar
+   ========================================================================== */
+
+/* Layar Ponsel (<= 575.98px) */
+@media (max-width: 575.98px) {
+    .display-5 {
+        font-size: 1.85rem;
+        line-height: 1.2;
+    }
+
+    .display-6 {
+        font-size: 1.55rem;
+        line-height: 1.25;
+    }
+
+    .h3 {
+        font-size: 1.35rem;
+    }
+
+    .card {
+        border-radius: 0.85rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+
+    /* Tabel di ponsel lebih ringkas */
+    .table th,
+    .table td {
+        padding-top: 0.55rem;
+        padding-bottom: 0.55rem;
+        font-size: 0.8125rem;
+    }
+
+    /* Tombol aksi di tabel tidak terlalu lebar ke samping */
+    .table .btn-sm {
+        padding: 0.25rem 0.45rem;
+        font-size: 0.75rem;
+    }
+
+    /* Posisi toast notifikasi agar tidak menutupi tombol bawah */
+    .toast-container {
+        left: 0;
+        right: 0;
+        bottom: 0.5rem !important;
+    }
+
+    .toast {
+        width: 100%;
+    }
+}
+
+/* Layar Tablet & Ponsel Besar (<= 767.98px) */
+@media (max-width: 767.98px) {
+    .navbar-brand .fs-5,
+    .navbar-brand .fs-6 {
+        font-size: 1rem !important;
+    }
+
+    .admin-chart-box {
+        height: 220px;
+    }
+
+    .d-flex.gap-3.flex-wrap > .btn {
+        flex: 1 1 auto;
+    }
+}
+
+/* Layar Menengah / Tablet Landscape (<= 991.98px) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding-top: 0.75rem;
+        padding-bottom: 0.5rem;
+        border-top: 1px solid #e2e8f0;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .admin-sticky-panel,
+    .sticky-lg-top {
+        position: static !important;
+        top: auto !important;
+    }
+}
+
+/* Layar Desktop Lebar (>= 1200px) */
+@media (min-width: 1200px) {
+    .container,
+    .container-fluid {
+        max-width: 1380px;
+    }
+
+    .admin-chart-box {
+        height: 280px;
+    }
+}
